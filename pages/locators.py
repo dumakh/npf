@@ -6,5 +6,6 @@ class MainPageLocators(object):
     SIGN_IN = (By.ID, "kc-login")
 
 class WidgetPageLocators(object):
-    FL_NEWFACE =
-    FL_JOURNAL
+    FL_NEWFACE_1 = (By.CSS_SELECTOR, 'widget-form :nth-child(1) .header .menu-icon')
+    FL_NEWFACE_2 = (By.CSS_SELECTOR, 'widget-form :nth-child(1) .header .menu-drop-list .menu-item:nth-child(2)')
+
