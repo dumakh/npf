@@ -16,11 +16,11 @@ def browser(request):
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
         print("\nstart chrome browser for test..")
         browser = webdriver.Chrome(options=options)
-    elif browser_name == "chrome":
-        fp = webdriver.Firefox.Profile()
+    elif browser_name == "firefox":
+        fp = webdriver.FirefoxProfile()
         fp.set_preference("intl.accept_languages", user_language)
         print("\nstart firefox browser for test..")
-        browser = webdriver.firefox(firefox_profile=fp)
+        browser = webdriver.Firefox(firefox_profile=fp)
     else:
         raise pytest.UsageError("--browser_name should be chrome or firefox")
     browser.maximize_window()
